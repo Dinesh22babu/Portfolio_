@@ -1,1 +1,361 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DineshBabu's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1a1a2e;
+      color: #ffffff;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+    header p {
+  font-size: 1.5rem;
+}
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00a8cc;
+}
+
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+    .card {
+  background-color: #16213e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #00a8cc;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #007b99;
+    }
+      @media (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .card {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+    section {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.6s ease;
+  margin-bottom: 2rem;
+}
+
+/* Alternate slide direction for even sections */
+section:nth-of-type(even) {
+  transform: translateX(-100px);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .skill-bar {
+      background-color: #00a8cc;
+      height: 10px;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: #ffffff;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .skill-card {
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .profile-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DineshBabu's Portfolio</h1>
+      <p>Front-End | Python Developer | JavaScript Developer | Data Analytics</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+        <p>Dinesh Babu – Cybersecurity and Software Development Enthusiast </br></br>
+Dinesh Babu is a 3rd-year Cyber Security student at KLN College of Engineering with strong skills in software development, particularly in Python, JavaScript, and front-end development. He is experienced in database management and has successfully completed four project-based works involving web development and Python with database integration. Additionally, he is adept at using Wireshark for network analysis, developing malware analysis tools, web vulnerability detection tools, and possesses excellent problem-solving skills in cybersecurity contexts.</p>
+  </div>
+      <a href="ResumeD.pdf" class="btn" target="_blank">View Resume</a>
+      <a href="ResumeD.pdf" class="btn" download>Download Resume</a>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="grid">
+        <div class="card skill-card">
+          <div>Frontend Development</div>
+          <div class="skill-bar" style="width: 85%;">85%</div>
+        </div>
+        <div class="card skill-card">
+          <div>Python Development</div>
+          <div class="skill-bar" style="width: 90%;">90%</div>
+        </div>
+        <div class="card skill-card">
+          <div>JavaScript Programming</div>
+          <div class="skill-bar" style="width: 80%;">80%</div>
+        </div>
+        <div class="card skill-card">
+          <div>OpenCV & ML Integration</div>
+          <div class="skill-bar" style="width: 70%;">70%</div>
+        </div>
+        <div class="card skill-card">
+          <div>Network Analysis (Wireshark)</div>
+          <div class="skill-bar" style="width: 75%;">75%</div>
+        </div>
+        <div class="card skill-card">
+          <div>Web Development</div>
+          <div class="skill-bar" style="width: 85%;">85%</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>ML-Based Vulnerability Scanner</h3>
+          <p>A comprehensive tool integrating machine learning with Flask to identify code vulnerabilities and enhance code security.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Face Recognition System</h3>
+          <p>Developed a facial recognition system using OpenCV to authenticate users without external libraries.</p>
+        </div>
+        <div class="card">
+          <h3>Login Page Security Implementation</h3>
+          <p>Designed a secure login interface with robust validation and authentication features using JavaScript and Python.</p>
+        </div>
+        <div class="card">
+          <h3>E-commerce Platform Development</h3>
+          <p>Created a dynamic e-commerce website with product listing, cart functionality, and secure payment gateway integration.</p>
+        </div>
+        <div class="card">
+          <h3>Automated Door Access System</h3>
+          <p>Implemented an automatic door opener using OpenCV for facial recognition and controlled access.</p>
+        </div>
+        <div class="card">
+            <h3>Greenhouse Monitoring System</h3>
+            <p>Developed a monitoring system to track temperature, humidity, and soil moisture levels using sensors and Python.</p>
+          </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>10th Grade</h3>
+          <p>Score: 393/500</p>
+        </div>
+        <div class="card">
+          <h3>12th Grade</h3>
+          <p>Score: 472/600</p>
+        </div>
+        <div class="card">
+          <h3>Current CGPA (College)</h3>
+          <p>8.114</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <div class="grid">
+        <div class="card">
+          <p>Tamil</p>
+        </div>
+        <div class="card">
+          <p>English</p>
+        </div>
+        <div class="card">
+          <p>Hindi</p>
+        </div>
+        <div class="card">
+          <p>Malayalam</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="extracurricular">
+      <h2>Extracurricular Activities</h2>
+      <div class="grid">
+        <div class="card">
+          <p>Drawing</p>
+        </div>
+        <div class="card">
+          <p>Listening to Music</p>
+        </div>
+        <div class="card">
+          <p>Playing Games</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Data Science</h3>
+          <p>Completed a comprehensive course on Data Science fundamentals.</p>
+        </div>
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>Certified in modern web development techniques and frameworks.</p>
+        </div>
+        <div class="card">
+          <h3>Pentesting</h3>
+          <p>Acquired practical skills in penetration testing and vulnerability assessment.</p>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <div class="card">
+        <p>Feel free to reach out for collaboration, project discussions, or professional inquiries.</p>
+        <p>Email: DineshBabuBabu@example.com</p>
+        <p>Mobile: +91 9876543210</p>
+        <a href="#" class="btn">LinkedIn</a>
+        <a href="#" class="btn">Instagram</a>
+      </div>
+    </section>
+  </div>
+  <script>
+   window.onload = function() {
+  const sections = document.querySelectorAll('section');
+
+  // Animate sections on load (one by one)
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('visible');
+    }, index * 300);
+  });
+
+  // Intersection Observer for scroll animation
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+};
+
+
+  </script>
+</body>
+</html>
